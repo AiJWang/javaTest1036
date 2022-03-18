@@ -2,5 +2,5 @@ package Java8Test.LambdaStudy;
 
 @FunctionalInterface
 public interface UpWords {
-    public String upWords(String words);
+    String upWords(String words);
 }

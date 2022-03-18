@@ -7,6 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
 
 /**
+ * LambdaInsideInter:java8 有内置的函数式接口，基本不用自己创建
  * java8 Lambda 表达式，都需要一个接口，Lambda相当于实现接口的方法
  * Lambda 表达式需要  函数式接口  的支持：接口中只有1个抽象方法的接口，可以使用注解@FunctionalInterface修饰一下。
  * 注意:如果引用了同级的变量，该变量是final的，不能修改
@@ -65,10 +66,20 @@ public class LambdaJava8Test {
     //把传入的字符转成大写
     public static void test4(){
         String a="hello java lambda";
-        String b= test5(a,x->x.toUpperCase());
+        //把传入的字符转成大写
+        String b= upCase(a,x->x.toUpperCase());
         System.out.println("b: "+b);
+        //获取子字符串
+        String c=upCase(a,x->x.substring(2,5));
+        System.out.println(c);
+        //两个泛型，x*2+y
+        long d=getLongTest(100L,400L,(x,y)->x*2+y);
+        System.out.println(d);
     }
-    public static String test5(String a,UpWords upWords){
+    public static String upCase(String a,UpWords upWords){
         return upWords.upWords(a);
+    }
+    public static long getLongTest(long a,long b,TwoFanXingInter<Long,Long> t){
+        return t.getk(a,b);
     }
 }
