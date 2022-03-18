@@ -30,6 +30,11 @@ package Study.LambdaStudy;
  * */
 public class BasicInfo {
     public static void main(String[] args) {
+        String a="https://wx018tzbl.58.com/tzbl/noise/index.shtml";
+        if (a.matches("wx\\d{3}tzbl.58.com/tzbl/noise/index.shtml"))
+            System.out.println("匹配");
+
+
         System.out.println((char) '0');
         //匹配演示
         checkQQ();

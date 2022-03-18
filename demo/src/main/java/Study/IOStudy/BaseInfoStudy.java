@@ -9,6 +9,8 @@ package Study.IOStudy;
  */
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *IO流分为字符流和字节流
@@ -46,7 +48,11 @@ public class BaseInfoStudy {
     public static void main(String[] args) throws IOException{
         //read();
         //readInputReader();
-        readInputReaderAndWriter();
+        //readInputReaderAndWriter();
+        List<Long> a=new ArrayList<>();
+        a.add(12312321L);
+        a.add(21321321356L);
+        System.out.println(a);
     }
 
     //读取键盘录入
